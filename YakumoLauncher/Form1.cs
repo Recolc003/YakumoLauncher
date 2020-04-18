@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace YakumoLauncher
 {
@@ -43,7 +44,38 @@ namespace YakumoLauncher
                    this.Location.Y + e.Y - mousePoint.Y);
             }
         }
+        
+        //textbox入力イベント
+        private void TextChangedEvent(object sender, EventArgs e)
+        {
+            //暫定でアプリと同じフォルダにmemo.txtを作る。
+            using (StreamWriter w = new StreamWriter(".\\memo.txt", false, Encoding.UTF8))
+            {
+                //メモ帳部分のテキスト書き込んでみる
+                w.Write(this.textBox1.Text);
+            }
+        }
 
+        private string ReadMemo()
+        {
+            using (StreamReader r = new StreamReader(".\\memo.txt", Encoding.UTF8))
+            {
+                return r.ReadToEnd();
+            }
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (this.textBox1.Visible)
+            {
+                this.textBox1.Visible = false;
+            }
+            else
+            {
+                this.textBox1.Visible = true;
+            }
+            
+        }
     }
 }
