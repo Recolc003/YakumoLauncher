@@ -63,6 +63,16 @@ namespace YakumoLauncher.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_create_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_create_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap yakumo_ran_01 {
             get {
                 object obj = ResourceManager.GetObject("yakumo_ran_01", resourceCulture);
