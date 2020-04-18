@@ -40,7 +40,7 @@ namespace YakumoLauncher
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::YakumoLauncher.Properties.Resources.ylauncher;
+            this.pictureBox1.Image = global::YakumoLauncher.Properties.Resources.yakumo_ran_01;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(394, 327);
@@ -59,6 +59,7 @@ namespace YakumoLauncher
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "YakumoLauncher";
+            this.TransparencyKey = this.BackColor;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -84,5 +84,8 @@
   <ItemGroup>
     <None Include="img\ylauncher.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\yakumo_ran_01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
