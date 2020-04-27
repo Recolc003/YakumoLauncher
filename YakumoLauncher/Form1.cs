@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using YakumoLauncher.appricationFunction;
 
 namespace YakumoLauncher
 {
@@ -48,23 +49,11 @@ namespace YakumoLauncher
         //textbox入力イベント
         private void TextChangedEvent(object sender, EventArgs e)
         {
-            //暫定でアプリと同じフォルダにmemo.txtを作る。
-            using (StreamWriter w = new StreamWriter(".\\memo.txt", false, Encoding.UTF8))
-            {
-                //メモ帳部分のテキスト書き込んでみる
-                w.Write(this.textBox1.Text);
-            }
+            //textboxの内容に変更があったタイミングで書き込み
+            MemoClass.WriteMemo(this.textBox1.Text);
         }
 
-        private string ReadMemo()
-        {
-            using (StreamReader r = new StreamReader(".\\memo.txt", Encoding.UTF8))
-            {
-                return r.ReadToEnd();
-            }
-
-        }
-
+        //メモボタンが押下されたときに、メモ欄の状態を切り替え
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             if (this.textBox1.Visible)
@@ -73,6 +62,9 @@ namespace YakumoLauncher
             }
             else
             {
+                //アクティブ化されたときにファイル内容を読み込み
+                //後で読み込み位置を変えるかも
+                this.textBox1.Text = MemoClass.ReadMemo();
                 this.textBox1.Visible = true;
             }
             

@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using YakumoLauncher.appricationFunction;
 
 namespace YakumoLauncher
 {
@@ -75,8 +76,9 @@ namespace YakumoLauncher
             this.textBox1.TabIndex = 1;
             this.textBox1.Parent = pictureBox1;
             this.textBox1.Visible = false;
-            this.textBox1.Text = this.ReadMemo(); //保存されたmemoの読み込み
-            this.textBox1.ImeMode = ImeMode.On;
+
+            //this.textBox1.Text = MemoClass.ReadMemo();  //保存されたmemoの読み込み
+            this.textBox1.ImeMode = ImeMode.On;         //日本語(2byte文字列)入力許可
             this.textBox1.TextChanged += new System.EventHandler(this.TextChangedEvent);
             // 
             // Form1
@@ -102,6 +104,8 @@ namespace YakumoLauncher
         private System.Windows.Forms.PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private TextBox textBox1;
+
     }
+
 }
 
