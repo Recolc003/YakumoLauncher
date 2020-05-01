@@ -15,5 +15,11 @@ namespace YakumoLauncher.appricationFunction
 
             return string.Format("{0:00}:{1:00}:{2:00}", dt.Hour, dt.Minute, dt.Second);
         }
+        public static string GetDate()
+        {
+            var dt = DateTime.Now;
+
+            return string.Format("{0:0000}/{1:00}/{2:00}", dt.Year, dt.Month, dt.Day);
+        }
     }
 }
