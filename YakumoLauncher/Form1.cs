@@ -72,7 +72,8 @@ namespace YakumoLauncher
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.label1.Text = TimeClass.GetTime();
+            this.TimeLabel.Text = TimeClass.GetTime();
+            this.DateLabel.Text = TimeClass.GetDate();
         }
     }
 }
