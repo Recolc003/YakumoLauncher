@@ -10,6 +10,12 @@ namespace YakumoLauncher.appricationFunction
     {
         public static string ReadMemo()
         {
+            // ファイルが存在していない場合、空のファイルを生成する
+            if (!System.IO.File.Exists(ProvisionalConstantClass.MemoFileName))
+            {
+                WriteMemo("");
+            }
+
             //ローカル保存のファイルから文字列を読み込み
             using (StreamReader r = new StreamReader(ProvisionalConstantClass.MemoFileName, Encoding.UTF8))
             {
